@@ -52,7 +52,10 @@ public class PlayerUseMysteryBonus : MonoBehaviour
         _count = 0;
         player.jumpForce = player.startJumpForce;
         Debug.Log("что за высер" + player.jumpForce);
-        if (player.startJumpForce != 19) //пока так 
+        if (player.startJumpForce != 19) //пока так (тут конечно проверка вроде не зачвем но тут баг номер 1)
+                                         //полсе использования бонуса сила прыжка не ставновится
+                                         //(иногда становится иногда нет)19 как в самом начале, но даже когда сила прыжка не 19
+                                         //проверка не срабатывает и Dеbug выводит что сила прыжка 19
         {
             Debug.Log("что за высер номер 2" + player.jumpForce);
             player.startJumpForce = 19;
