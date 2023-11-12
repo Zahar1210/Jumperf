@@ -10,6 +10,7 @@ public class PlayerUseBonusDisplayManager : MonoBehaviour
     [SerializeField] private Animator animator;
 
     private string _nameAnimation;
+    private bool _useBonus;
 
     public void GetActiveBonus(BonusType type)
     {
@@ -36,8 +37,14 @@ public class PlayerUseBonusDisplayManager : MonoBehaviour
                 break;
         }
         
-        if (nameAnimation != null)
+        if (nameAnimation != null && !_useBonus)
         {
+            _useBonus = true;
+            PlayActiveBonusAnimation(pos, nameAnimation);
+        }
+        else
+        {
+            DeactivateBonusAnimation();
             PlayActiveBonusAnimation(pos, nameAnimation);
         }
     }
@@ -52,6 +59,7 @@ public class PlayerUseBonusDisplayManager : MonoBehaviour
 
     public void DeactivateBonusAnimation()
     {
+        _useBonus = false;
         sprite.sprite = null;
         animator.SetBool(_nameAnimation, false);
         animator.gameObject.SetActive(false);
