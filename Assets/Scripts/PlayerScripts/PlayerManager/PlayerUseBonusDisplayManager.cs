@@ -43,7 +43,7 @@ public class PlayerUseBonusDisplayManager : MonoBehaviour
         }
     }
 
-    private void PlayActiveBonusAnimation(Vector2 bonusPosition, string nameAnimation)
+    public void PlayActiveBonusAnimation(Vector2 bonusPosition, string nameAnimation)
     {
         Debug.Log("начали ");
         animator.gameObject.SetActive(true);

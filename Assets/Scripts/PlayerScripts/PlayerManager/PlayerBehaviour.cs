@@ -21,7 +21,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private PlayerDead playerDead;
     [SerializeField] private CheckBonuses check;
     [SerializeField] private CheckDeadObject checkDead;
-    [SerializeField] private PlayerTwistToFate reverse; 
+    [SerializeField] private PlayerTwistToFate reverse;
 
     private Rigidbody2D _rigidbody;
     private bool _isDeath;
@@ -56,6 +56,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void DieContusionBonus()
     {
+        useBonusDisplay.PlayActiveBonusAnimation( Vector2.zero, "isContusion");
         jumpForce -= decreaseJumpForce;
         Jump();
         playerUseSnare.Contusion();

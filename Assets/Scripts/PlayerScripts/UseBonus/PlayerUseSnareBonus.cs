@@ -10,8 +10,4 @@ public class PlayerUseSnareBonus : MonoBehaviour
         checkPlatform.enabled = false;
         checkBonuses.enabled = false;
     }
-    private void SetLimitToUseBonus()
-    {
-        
-    }
 }
