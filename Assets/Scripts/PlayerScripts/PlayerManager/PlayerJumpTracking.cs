@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerJumpTracking : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     public bool isUp;
     private float _previousYPosition;
 
@@ -20,5 +21,9 @@ public class PlayerJumpTracking : MonoBehaviour
             isUp = false;
         
         _previousYPosition = currentYPosition;
+    }
+    public void SetAnimation()
+    {
+        animator.SetBool("isJump", false);
     }
 }
