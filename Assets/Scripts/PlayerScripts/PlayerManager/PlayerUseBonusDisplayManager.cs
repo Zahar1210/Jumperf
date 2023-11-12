@@ -35,8 +35,7 @@ public class PlayerUseBonusDisplayManager : MonoBehaviour
             case BonusType.None:
                 break;
         }
-
-        Debug.Log(pos + " " + nameAnimation);
+        
         if (nameAnimation != null)
         {
             PlayActiveBonusAnimation(pos, nameAnimation);
