@@ -18,7 +18,7 @@ public class SnareBonus : BonusAbstract
     public override void Action()
     {
         animator.SetBool("isSnare", true);
-        _player.DieContusionBonus();
+        _player.DieContusionBonus(true);
     }
 
     public override void EnableBonus(bool isSpawn, PlatformAbstract platform)

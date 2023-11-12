@@ -42,7 +42,7 @@ public class EnemyPlatform : PlatformAbstract
         if (condition)
             player.Jump();
         else
-            player.DieContusionBonus();
+            player.DieContusionBonus(false);
     }
 
     public override void EnablePlatform(bool isSpawn)

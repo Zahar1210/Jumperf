@@ -15,7 +15,6 @@ public class PlayerDeadWithFall : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("аааааа умерли");
         modeController.ActivePanel();
     }
 }

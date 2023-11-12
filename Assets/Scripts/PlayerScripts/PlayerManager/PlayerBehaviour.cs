@@ -1,6 +1,4 @@
 using UnityEngine;
-
-
 public class PlayerBehaviour : MonoBehaviour
 {
     public static PlayerBehaviour Instance { get; private set; }
@@ -27,7 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
     private bool _isDeath;
     private int _jumpCount;
     private float _time;
-    
+
     public bool IsDead { get; set; }
     public bool UseJetpack { get; private set; }
     public bool UseCap { get; private set; }
@@ -54,9 +52,11 @@ public class PlayerBehaviour : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    public void DieContusionBonus()
+    public void DieContusionBonus(bool isSnare)
     {
-        useBonusDisplay.PlayActiveBonusAnimation( Vector2.zero, "isContusion");
+        if (!isSnare) {
+            useBonusDisplay.PlayActiveBonusAnimation(Vector2.zero, "isContusion");
+        }
         jumpForce -= decreaseJumpForce;
         Jump();
         playerUseSnare.Contusion();
@@ -68,6 +68,7 @@ public class PlayerBehaviour : MonoBehaviour
         Jump();
         jumpForce -= usageFlyBonusJumpForce;
     }
+
     public void Jump()
     {
         _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);

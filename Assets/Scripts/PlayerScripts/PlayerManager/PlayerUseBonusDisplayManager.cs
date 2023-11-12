@@ -45,7 +45,6 @@ public class PlayerUseBonusDisplayManager : MonoBehaviour
 
     public void PlayActiveBonusAnimation(Vector2 bonusPosition, string nameAnimation)
     {
-        Debug.Log("начали ");
         animator.gameObject.SetActive(true);
         animator.gameObject.transform.localPosition = bonusPosition;
         animator.SetBool(nameAnimation, true);
@@ -54,7 +53,6 @@ public class PlayerUseBonusDisplayManager : MonoBehaviour
 
     public void DeactivateBonusAnimation()
     {
-        Debug.Log("прекратили "); 
         sprite.sprite = null;
         animator.SetBool(_nameAnimation, false);
         animator.gameObject.SetActive(false);
