@@ -21,9 +21,10 @@ public class CheckingFall : MonoBehaviour
         float verticalSpeed = _rb.velocity.y;
         _timeFalling = verticalSpeed < 0 ? _timeFalling + Time.deltaTime : 0;
 
-        if (_timeFalling >= timeSave && !player.UseCap && !player.UseJetpack)
+        if (_timeFalling >= timeSave && !player.UseCap && !player.UseJetpack) {
             player.IsSave = false;
-
+        }
+        
         if (_timeFalling >= timeDeath && !player.UseJetpack && !player.UseCap && isFalling)
         {
             isFalling = false;

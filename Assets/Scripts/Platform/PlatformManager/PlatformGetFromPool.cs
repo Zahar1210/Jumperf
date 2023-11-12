@@ -1,4 +1,3 @@
-using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,10 +6,8 @@ public class PlatformGetFromPool : MonoBehaviour
     [SerializeField] private float maxInterval;
     [SerializeField] private float minInterval;
     [SerializeField] private PlatformSpawner platformSpawner;
-
-
     [SerializeField] private GameObject point;
-    
+
     private float _spawnDistanceInterval;
     private float _lastSpawnPosition;
 
@@ -27,7 +24,7 @@ public class PlatformGetFromPool : MonoBehaviour
             _spawnDistanceInterval = RandomInterval();
             platformSpawner.SpawnPlatform();
             _lastSpawnPosition = currentYPosition;
-           // Instantiate(point, transform.position, quaternion.identity);
+            // Instantiate(point, transform.position, quaternion.identity);//пока так это для проверки того когда не спавнятся платформы 
         }
     }
 

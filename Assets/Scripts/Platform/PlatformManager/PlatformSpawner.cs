@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using Unity.Burst.Intrinsics;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -74,10 +72,12 @@ public class PlatformSpawner : MonoBehaviour
         BonusAbstract bonus = SetBonus(platformType);
         Vector2 platformPosition = GetPlatformPosition();
         PlatformAbstract platform = platformPooler.GetPlatformFromPool(platformType);
-        if (bonus)
+        if (bonus) {
             PlatformSpawn(platform, platformPosition, bonus);
-        else
+        }
+        else {
             PlatformSpawn(platform, platformPosition);
+        }
     }
 
     private BonusAbstract CheckOnType(bool isOriginal)

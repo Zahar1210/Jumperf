@@ -1,4 +1,5 @@
 using UnityEngine;
+
 public class PlayerBehaviour : MonoBehaviour
 {
     public static PlayerBehaviour Instance { get; private set; }
@@ -43,7 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
             Instance = this;
             return;
         }
-
+        
         Destroy(gameObject);
     }
 
@@ -52,7 +53,7 @@ public class PlayerBehaviour : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    public void DieContusionBonus(bool isSnare)
+    public void Contusion(bool isSnare)
     {
         if (!isSnare) {
             useBonusDisplay.PlayActiveBonusAnimation(Vector2.zero, "isContusion");

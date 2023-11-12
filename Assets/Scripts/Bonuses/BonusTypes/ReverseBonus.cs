@@ -16,9 +16,7 @@ public class ReverseBonus : BonusAbstract
     public override void Action()
     {
         if (!_player.UseReverseBonus)
-        {
             _player.Reverse();
-        }
     }
 
     public override void EnableBonus(bool isSpawn, PlatformAbstract platform)

@@ -17,7 +17,7 @@ public class ChangingPlatform : PlatformAbstract
         if (_condition)
             player.Jump();
         else
-            player.DieContusionBonus(false);
+            player.Contusion(false);
     }
     
     public override void EnablePlatform(bool isSpawn)

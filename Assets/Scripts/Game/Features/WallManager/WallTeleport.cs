@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class WallTeleport : MonoBehaviour
@@ -11,7 +10,8 @@ public class WallTeleport : MonoBehaviour
     private void Update()
     {
         bool isLeft = leftSide;
-        bool isPastTarget = isLeft ? transform.position.x > target.position.x : transform.position.x < target.position.x;
+        bool isPastTarget =
+            isLeft ? transform.position.x > target.position.x : transform.position.x < target.position.x;
 
         if (isPastTarget)
         {

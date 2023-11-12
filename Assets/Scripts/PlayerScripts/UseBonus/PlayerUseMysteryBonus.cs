@@ -51,6 +51,10 @@ public class PlayerUseMysteryBonus : MonoBehaviour
         player.EnableUseBonus();
         _count = 0;
         player.jumpForce = player.startJumpForce;
+        if (player.startJumpForce != 19)//пока так 
+        {
+            player.startJumpForce = 19;
+        }
         player.UseJumpBonus = false;
         player.JumpDownBonus = false;
         player.JumpUpBonus = false;

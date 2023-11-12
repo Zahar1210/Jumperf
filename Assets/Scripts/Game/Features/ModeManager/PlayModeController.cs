@@ -7,7 +7,7 @@ public class PlayModeController : MonoBehaviour
     [SerializeField] private PanelController panel;
     private PlayerBehaviour _player;
 
-    private void Start()
+    private void Start()//пока так возможно не понадится
     {
         _player = PlayerBehaviour.Instance;
     }

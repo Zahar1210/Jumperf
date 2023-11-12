@@ -19,7 +19,7 @@ public class MainData : MonoBehaviour
         _camera = Camera.main;
     }
 
-    private void Start()
+    private void Start()//пока так (вроде не обязательно именно так узнавать границы экрана)
     {
         Vector3 screenLeft = _camera.ViewportToWorldPoint(new Vector3(0, 0.5f, 0));
         Vector3 screenRight = _camera.ViewportToWorldPoint(new Vector3(1, 0.5f, 0));
