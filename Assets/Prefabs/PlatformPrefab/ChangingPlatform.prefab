@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bonus: {fileID: 0}
-  IsActive: 1
+  IsActive: 0
   PlatformType: 5
   _timeChange: 3
   _spriteRenderer: {fileID: 8295609653773281381}

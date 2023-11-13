@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bonus: {fileID: 0}
-  IsActive: 1
+  IsActive: 0
   PlatformType: 3
   condition: 1
   spriteRenderer: {fileID: 5534850196422151123}
