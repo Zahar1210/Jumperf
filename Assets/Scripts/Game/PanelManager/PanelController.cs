@@ -45,7 +45,6 @@ public class PanelController : MonoBehaviour
         backGroundPanel.SetActive(false);
         Time.timeScale = 1;
         IsActive = false;
-        AudioController.Instance.PlayBackGroundMusic();
     }
 
     private void SetOpenPanel()

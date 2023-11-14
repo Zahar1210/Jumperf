@@ -22,6 +22,7 @@ public class SwitchToggle : MonoBehaviour
 
     private void OnSwitch(bool on)
     {
+        AudioController.Instance.PlayBackGroundMusic();
         handleTransform.anchoredPosition = on?_handlePos * -1:_handlePos;
     }
 
