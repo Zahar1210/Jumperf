@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AudioBackGround
   m_EditorClassIdentifier: 
   Name: BackGroundMusic
-  AudioClip: {fileID: 0}
-  Value: 0
+  AudioClip: {fileID: 8300000, guid: 65c8547a9ac2441aba900346684185f0, type: 3}
+  Value: 1

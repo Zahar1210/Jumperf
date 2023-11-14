@@ -27,14 +27,15 @@ public class PanelController : MonoBehaviour
 
     public void EnablePanel()
     {
-        if (!IsActive)
-        {
+        AudioController.Instance.StopAudio();
+        if (!IsActive) {
             SetOpenPanel();
             EnableButton(!player.IsDead);
             panelAnimation.SetBool("isPanel", true);
         }
         else
             panelAnimation.SetBool("isPanel", false);
+        
     }
 
     private void SetClosePanel()
@@ -44,6 +45,7 @@ public class PanelController : MonoBehaviour
         backGroundPanel.SetActive(false);
         Time.timeScale = 1;
         IsActive = false;
+        AudioController.Instance.PlayBackGroundMusic();
     }
 
     private void SetOpenPanel()
