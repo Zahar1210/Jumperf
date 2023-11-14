@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AudioPlayerJump_1
   m_EditorClassIdentifier: 
   Name: PlayerJump1
-  AudioClip: {fileID: 0}
-  Value: 0
+  AudioClip: {fileID: 8300000, guid: 84a9910e4d8964f6bb6154077ed8cb79, type: 3}
+  Value: 1

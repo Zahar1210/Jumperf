@@ -14,12 +14,18 @@ public class ChangingPlatform : PlatformAbstract
     public override void Action()
     {
         PlayerBehaviour player = PlayerBehaviour.Instance;
-        if (_condition)
+        if (_condition) {
+            AudioController.Instance.PlayAudio("PlayerJump1");
             player.Jump();
+        }
+
         else
+        {
+            AudioController.Instance.PlayAudio("PlayerDie");
             player.Contusion(false);
+        }
     }
-    
+
     public override void EnablePlatform(bool isSpawn)
     {
         Bonus = null;

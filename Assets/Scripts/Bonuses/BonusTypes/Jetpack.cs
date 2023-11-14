@@ -16,6 +16,7 @@ public class Jetpack : BonusAbstract
     public override void Action()
     {
         _player.Fly(false);
+        AudioController.Instance.PlayAudio("UseJetpack");
     }
 
     public override void EnableBonus(bool isSpawn, PlatformAbstract platform)

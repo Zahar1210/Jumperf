@@ -23,6 +23,7 @@ public class MovingPlatform : PlatformAbstract
     public override void Action()
     {
         PlayerBehaviour player = PlayerBehaviour.Instance;
+        AudioController.Instance.PlayAudio("PlayerJump1");
         player.Jump();
     }
 

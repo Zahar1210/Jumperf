@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdbc44131614406a9a00f2c33545a44, type: 3}
   m_Name: AudioPlayerDie
   m_EditorClassIdentifier: 
-  Name: 
-  AudioClip: {fileID: 0}
-  Value: 0
+  Name: PlayerDie
+  AudioClip: {fileID: 8300000, guid: 385677eb022a0468fbf66082396ae639, type: 3}
+  Value: 1

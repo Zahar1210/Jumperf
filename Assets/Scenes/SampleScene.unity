@@ -494,6 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 161170668}
   - component: {fileID: 161170669}
+  - component: {fileID: 161170670}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -528,20 +529,112 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4837c3ec85c1a4395867abb308eca5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameAudio:
+  audios:
   - {fileID: 11400000, guid: 5b81b289b021447b296ff7d9d5252883, type: 2}
-  playerAudio:
   - {fileID: 11400000, guid: ec84d278459ec49fabe3c26a6989ba78, type: 2}
   - {fileID: 11400000, guid: 0f30bbb9319654848b7a5d541abffed8, type: 2}
   - {fileID: 11400000, guid: d7b228d853b1248abaa76cdc22afecb5, type: 2}
-  - {fileID: 11400000, guid: 9bef746d582f14249866f610f4ebee86, type: 2}
-  - {fileID: 11400000, guid: ae41f2e3a7ceb44daab024f99c1a50a0, type: 2}
+  - {fileID: 11400000, guid: 09d523966dffe4e9faba5c99c485176f, type: 2}
   - {fileID: 11400000, guid: 05011a113feec4f9ba8cca5c712472af, type: 2}
   - {fileID: 11400000, guid: c3c618c32fb8245d4a476f0d7249fd8b, type: 2}
-  - {fileID: 11400000, guid: fd65ae1f0565e495aab32a0b8ab391b8, type: 2}
-  - {fileID: 11400000, guid: fd65ae1f0565e495aab32a0b8ab391b8, type: 2}
   - {fileID: 11400000, guid: 092cb94d5291e4619a58056576c3c199, type: 2}
-  - {fileID: 11400000, guid: 09d523966dffe4e9faba5c99c485176f, type: 2}
+  _audio: {fileID: 161170670}
+--- !u!82 &161170670
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161170667}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &166043337
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +955,6 @@ GameObject:
   - component: {fileID: 238298189}
   - component: {fileID: 238298188}
   - component: {fileID: 238298187}
-  - component: {fileID: 238298186}
   m_Layer: 3
   m_Name: PlatformScrollBG
   m_TagString: Untagged
@@ -870,22 +962,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &238298186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238298185}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81e2d11a7503d445aa88a50afe686328, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxInterval: 1.7
-  minInterval: 1.4
-  platformSpawner: {fileID: 1860308163}
-  point: {fileID: 1214100428}
 --- !u!61 &238298187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3272,8 +3348,8 @@ MonoBehaviour:
   typeControl: 0
   currentForce: 0
   currentDistance: 0
-  minMappedValue: 1
-  maxMappedValue: 4
+  minMappedValue: 0
+  maxMappedValue: 2
   maxDistance: 65
   maxForce: 7
   forcePlay: 22
@@ -3438,7 +3514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &953023549
 Transform:
   m_ObjectHideFlags: 0
@@ -5775,7 +5851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734558707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.021, y: -0.242, z: 0}
+  m_LocalPosition: {x: 0.021, y: -0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

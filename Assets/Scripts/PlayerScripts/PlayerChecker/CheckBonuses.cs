@@ -16,6 +16,7 @@ public class CheckBonuses : MonoBehaviour
             bonus?.Action();
             bonus?.UseBonus();
             playerUseBonusDisplay.GetActiveBonus(bonus.Type);
+            AudioController.Instance.PlayAudio("PlayerTakeBonus");
         }
     }
 }

@@ -58,6 +58,8 @@ public class PlayerBehaviour : MonoBehaviour
         if (!isSnare) {
             useBonusDisplay.PlayActiveBonusAnimation(Vector2.zero, "isContusion");
         }
+
+        AudioController.Instance.PlayAudio("PlayerDie");
         jumpForce -= decreaseJumpForce;
         Jump();
         playerUseSnare.Contusion();
@@ -84,6 +86,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void BoostJump()
     {
+        AudioController.Instance.PlayAudio("PlayerJump2");
         jumpForce += boostForce;
         Jump();
         jumpForce -= boostForce;
@@ -91,6 +94,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void StartJump()
     {
+        AudioController.Instance.PlayAudio("PlayerJump2");
         jumpForce += startJump;
         Jump();
         jumpForce -= startJump;
@@ -100,6 +104,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (!_isDeath)
         {
+            AudioController.Instance.PlayAudio("PlayerDie");
             checkDead.enabled = true;
             playerDead.DieFromFall();
             _isDeath = true;
@@ -131,6 +136,7 @@ public class PlayerBehaviour : MonoBehaviour
         UsageBonusJump();
         UseCap = false;
         UseJetpack = false;
+        AudioController.Instance.StopAudio();
     }
 
     public void EnableUseBonus()

@@ -39,8 +39,10 @@ public class EnemyPlatform : PlatformAbstract
 
     public override void Action()
     {
-        if (condition)
+        if (condition) {
+            AudioController.Instance.PlayAudio("PlayerJump1");
             player.Jump();
+        }
         else
             player.Contusion(false);
     }

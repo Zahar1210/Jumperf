@@ -9,6 +9,7 @@ public class StartPlatform : PlatformAbstract
         if (!isStart)
         {
             player.Jump();
+            AudioController.Instance.PlayAudio("PlayerJump1");
         }
         else if (isStart)
         {

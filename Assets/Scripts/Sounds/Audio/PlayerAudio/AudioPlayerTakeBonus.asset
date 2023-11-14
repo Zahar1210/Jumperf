@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AudioPlayerTakeBonus
   m_EditorClassIdentifier: 
   Name: PlayerTakeBonus
-  AudioClip: {fileID: 0}
-  Value: 0
+  AudioClip: {fileID: 8300000, guid: ba5f4fc5f802343da93b314b7ec0cbed, type: 3}
+  Value: 1

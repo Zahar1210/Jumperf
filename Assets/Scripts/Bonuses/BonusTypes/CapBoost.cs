@@ -16,6 +16,7 @@ public class CapBoost : BonusAbstract
     public override void Action()
     {
         _player.Fly(true);
+        AudioController.Instance.PlayAudio("UseJetpack");
     }
 
     public override void EnableBonus(bool isSpawn, PlatformAbstract platform)

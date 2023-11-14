@@ -17,6 +17,7 @@ public class SnareBonus : BonusAbstract
 
     public override void Action()
     {
+        AudioController.Instance.PlayAudio("UseSnare");
         animator.SetBool("isSnare", true);
         _player.Contusion(true);
     }

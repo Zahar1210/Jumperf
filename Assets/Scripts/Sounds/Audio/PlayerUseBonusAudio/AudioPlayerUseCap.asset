@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AudioPlayerUseCap
   m_EditorClassIdentifier: 
   Name: UseCap
-  AudioClip: {fileID: 0}
-  Value: 0
+  AudioClip: {fileID: 8300000, guid: 3ca54fa40058f458f9e7ef512114a726, type: 3}
+  Value: 1

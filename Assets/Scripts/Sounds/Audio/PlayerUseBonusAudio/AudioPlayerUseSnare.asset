@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: AudioPlayerUseSnare
   m_EditorClassIdentifier: 
   Name: UseSnare
-  AudioClip: {fileID: 0}
-  Value: 0
+  AudioClip: {fileID: 8300000, guid: 8f916fff3ff8d45fc84435a5f461153b, type: 3}
+  Value: 1
