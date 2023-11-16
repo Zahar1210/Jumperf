@@ -21,18 +21,15 @@ public class PlayerUseFlyBonus : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_useCap)
-            _rigidbody.AddForce(Vector2.up * flyForceCap * Time.fixedTime, ForceMode2D.Force);
-        else
-            _rigidbody.AddForce(Vector2.up * flyForceJetpack * Time.fixedTime, ForceMode2D.Force);
-        
+        _rigidbody.AddForce(Vector2.up * (_useCap ? flyForceCap : flyForceJetpack) * Time.fixedDeltaTime, ForceMode2D.Force);
+
         if (scoreManager.point >= _limitScore)
         {
             player.EnableUseBonus();
-            player.UsageBonus();
+            player.UsageFlyBonus();
         }
     }
-    
+
     public void SetLimitToUseBonus(bool isCap)
     {
         if (isCap)

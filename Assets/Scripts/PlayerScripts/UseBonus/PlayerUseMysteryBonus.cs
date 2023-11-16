@@ -8,7 +8,6 @@ public class PlayerUseMysteryBonus : MonoBehaviour
     [SerializeField] private PlayerBehaviour player;
     [SerializeField] private int increaseJumpCount;
     [SerializeField] private int decreaseJumpCount;
-
     private int _count;
     private int _limitScore;
     private int _intervalScore;
@@ -51,12 +50,6 @@ public class PlayerUseMysteryBonus : MonoBehaviour
         player.EnableUseBonus();
         _count = 0;
         player.jumpForce = player.startJumpForce;
-        Debug.Log("что за высер" + player.jumpForce);
-        if (player.startJumpForce != 19)
-        {
-            Debug.Log("что за высер номер 2" + player.jumpForce);
-            player.startJumpForce = 19;
-        }
         player.UseJumpBonus = false;
         player.JumpDownBonus = false;
         player.JumpUpBonus = false;

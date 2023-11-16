@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BonusReverse
   m_EditorClassIdentifier: 
   bonusType: 4
-  chance: 1
+  chance: 4

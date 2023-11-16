@@ -22,7 +22,11 @@ public class MysteryBonus : BonusAbstract
         if (!_player.UseJumpBonus)
         {
             bool useJumpBonus = (Random.Range(0, 2) == 0);
-            _player.JumpBonus(useJumpBonus);
+            _player.JumpBonusUse(useJumpBonus);
+        }
+        else
+        {
+            Debug.Log("фигушки");
         }
     }
 

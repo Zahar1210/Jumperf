@@ -71,7 +71,7 @@ public class PlatformSpawner : MonoBehaviour
         if (isOriginal)
         {
             BonusType bonusType = bonusPooler.RandomSpawn();
-            if (bonusType != BonusType.None && bonusType != BonusType.Reverse)
+            if (bonusType != BonusType.None)
             {
                 BonusAbstract _bonus = bonusPooler.GetBonus(bonusType);
                 if (_bonus != null)

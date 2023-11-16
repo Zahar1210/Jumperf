@@ -1,9 +1,7 @@
-using System;
 using UnityEngine;
 
 public class PlatformReturnToPool : MonoBehaviour
 {
-    [SerializeField] private PlatformPooler platformPool;
     [SerializeField] private Vector2 size;
     [SerializeField] private LayerMask layerMask;
 
@@ -23,7 +21,8 @@ public class PlatformReturnToPool : MonoBehaviour
         if (platform != null)
         {
             BonusAbstract bonus = platform.Bonus;
-            if (bonus) {
+            if (bonus)
+            {
                 bonus.EnableBonus(false, null);
             }
 

@@ -509,13 +509,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161170667}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1860308161}
-  m_RootOrder: 2
+  m_Father: {fileID: 519420032}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &161170669
 MonoBehaviour:
@@ -1152,7 +1152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244898726
 GameObject:
@@ -2057,10 +2057,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 2.2599998, z: -10}
+  m_LocalPosition: {x: -1.52, y: 2.7599998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 161170668}
   - {fileID: 1114932040}
   - {fileID: 238298189}
   - {fileID: 752285718}
@@ -2560,7 +2561,7 @@ Transform:
   - {fileID: 1549473552}
   - {fileID: 828950771}
   m_Father: {fileID: 519420032}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681923087
 GameObject:
@@ -2963,7 +2964,7 @@ Transform:
   - {fileID: 499598833}
   - {fileID: 1778863297}
   m_Father: {fileID: 519420032}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760831530
 GameObject:
@@ -3332,11 +3333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4b590ecc8da4cfb82c7cb049f59bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startJumpForce: 19
-  jumpForce: 19
+  startJumpForce: 21
+  jumpForce: 21
   usageFlyBonusJumpForce: 8
   startJump: 35
-  boostForce: 10
+  boostForce: 8
   startGravityScale: 2
   decreaseJumpForce: 10
   useBonusDisplay: {fileID: 861332437}
@@ -3450,7 +3451,7 @@ MonoBehaviour:
   maxMappedValue: 2
   maxDistance: 65
   maxForce: 7
-  forcePlay: 22
+  forcePlay: 21
   filter: 0.1
 --- !u!95 &861332430
 Animator:
@@ -3503,8 +3504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1860308168}
   player: {fileID: 861332424}
-  flyForceCap: 0.5
-  flyForceJetpack: 0.6
+  flyForceCap: 900
+  flyForceJetpack: 1000
   intervalScoreCap: 50
   intervalScoreJetPack: 80
 --- !u!114 &861332437
@@ -3568,6 +3569,7 @@ MonoBehaviour:
   player: {fileID: 861332424}
   increaseJumpCount: 3
   decreaseJumpCount: 3
+  intervalJumpForce: 10
 --- !u!114 &861332442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4222,7 +4224,7 @@ Transform:
   m_Children:
   - {fileID: 1733534846}
   m_Father: {fileID: 519420032}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120605702
 GameObject:
@@ -5509,7 +5511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37028773998f8422cbb5d9e971634843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platformPool: {fileID: 1860308162}
   size: {x: 100, y: 0.5}
   layerMask:
     serializedVersion: 2
@@ -5888,16 +5889,16 @@ MonoBehaviour:
   m_ZDamping: 0.1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.74
+  m_ScreenY: 0.78999996
   m_CameraDistance: 10
   m_DeadZoneWidth: 2
-  m_DeadZoneHeight: 0.43
+  m_DeadZoneHeight: 0.68
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 2
   m_SoftZoneHeight: 2
   m_BiasX: 0
-  m_BiasY: 0.00000007894655
+  m_BiasY: 0.00000040639532
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
@@ -6040,7 +6041,7 @@ Transform:
   - {fileID: 220154563}
   - {fileID: 1532576529}
   m_Father: {fileID: 519420032}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1758725959
 GameObject:
@@ -6421,7 +6422,6 @@ Transform:
   m_Children:
   - {fileID: 1562185933}
   - {fileID: 681923089}
-  - {fileID: 161170668}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6437,6 +6437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663d02d2fb00d4f9b92212f390a43625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _platformAbstracts: []
   platformPrefab:
   - {fileID: 8662307443281992436, guid: f47e6c0606a104b4db3737d3fcf5072b, type: 3}
   - {fileID: 8662307443281992436, guid: f47e6c0606a104b4db3737d3fcf5072b, type: 3}
@@ -6478,11 +6479,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05f56e05fdc7949b29240e221792a693, type: 2}
   - {fileID: 11400000, guid: dd789463fa4134726ac463c196e05a2d, type: 2}
   - {fileID: 11400000, guid: 6ab1a248b6d254ec290361269d006193, type: 2}
-  _platformAbstracts: []
-  maxConsecutiveSpawnsBad: 1
-  maxConsecutiveSpawnsGood: 2
-  goodPlatformTypes: 000000000600000001000000
-  badPlatformTypes: 03000000020000000400000005000000
 --- !u!114 &1860308163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6500,10 +6496,7 @@ MonoBehaviour:
   mainData: {fileID: 681923088}
   pointToSpawn: {fileID: 828950771}
   maxConsecutiveSpawnsBad: 1
-  maxConsecutiveSpawnsGood: 2
-  goodPlatformTypes: 00000000010000000600000007000000
   badPlatformTypes: 02000000040000000300000005000000
-  point: {fileID: 1214100428}
 --- !u!114 &1860308165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6557,11 +6550,7 @@ MonoBehaviour:
   - {fileID: 2238923456659621098, guid: d8849cac2c26c4b8499f8bb15220c2bc, type: 3}
   - {fileID: 2238923456659621098, guid: d8849cac2c26c4b8499f8bb15220c2bc, type: 3}
   bonusInfo:
-  - {fileID: 11400000, guid: f02dbd060142747d0bb3a0853bf5a0d1, type: 2}
-  - {fileID: 11400000, guid: d4c96e611b99943c2aec9b5abccfe707, type: 2}
   - {fileID: 11400000, guid: 0cd40988aa42740a9b47e7054f4da6f9, type: 2}
-  - {fileID: 11400000, guid: e6bf2daf8abed45e589042751e6f18db, type: 2}
-  - {fileID: 11400000, guid: 93a152660f96945c68d872d87b931a2a, type: 2}
   chanceSpawnBonus: 5
 --- !u!114 &1860308168
 MonoBehaviour:
@@ -6870,7 +6859,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1886462234
 SpriteRenderer:

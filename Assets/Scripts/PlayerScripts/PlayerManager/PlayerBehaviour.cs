@@ -79,7 +79,7 @@ public class PlayerBehaviour : MonoBehaviour
         playerUseMystery.IsBonusUsed();
     }
 
-    public void JumpBonus(bool isBonus)
+    public void JumpBonusUse(bool isBonus)
     {
         playerUseMystery.UseMysteryBonus(isBonus);
     }
@@ -90,6 +90,11 @@ public class PlayerBehaviour : MonoBehaviour
         jumpForce += boostForce;
         Jump();
         jumpForce -= boostForce;
+        if (jumpForce != startJumpForce)//сверх костыль (в данном месте полезен)
+        {
+            Debug.LogError("mdakmd");
+            jumpForce = startJumpForce;
+        }
     }
 
     public void StartJump()
@@ -113,12 +118,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Fly(bool isCap)
     {
+        Debug.LogError("вызвал");
         playerUseFly.enabled = true;
         playerUseFly.SetLimitToUseBonus(isCap);
-        UseBonus(isCap);
+        UseFlyBonus(isCap);
     }
 
-    private void UseBonus(bool isCap)
+    private void UseFlyBonus(bool isCap)
     {
         _rigidbody.gravityScale = 0;
         check.gameObject.SetActive(false);
@@ -128,7 +134,7 @@ public class PlayerBehaviour : MonoBehaviour
             UseJetpack = true;
     }
 
-    public void UsageBonus()
+    public void UsageFlyBonus()
     {
         _rigidbody.gravityScale = startGravityScale;
         check.gameObject.SetActive(true);
@@ -142,6 +148,11 @@ public class PlayerBehaviour : MonoBehaviour
     public void EnableUseBonus()
     {
         useBonusDisplay.DeactivateBonusAnimation();
+    }
+
+    public void UsageJumpBonus()
+    {
+        jumpForce -= boostForce;
     }
 
     public void Reverse()
