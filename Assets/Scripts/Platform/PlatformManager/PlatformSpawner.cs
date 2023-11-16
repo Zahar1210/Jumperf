@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,6 +11,7 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField] private Transform pointToSpawn;
     [SerializeField] private int maxConsecutiveSpawnsBad;
     [SerializeField] private List<PlatformTypes> badPlatformTypes;
+    [SerializeField] private GameObject point;
 
     private int _consecutiveSpawnsGood;
     private int _consecutiveSpawnsBad;
@@ -55,6 +57,7 @@ public class PlatformSpawner : MonoBehaviour
     {
         float randomX = Random.Range(mainData.LeftBoundModified, mainData.RightBoundModified);
         Vector2 randomPoint = new Vector2(randomX, pointToSpawn.position.y);
+        Instantiate(point, randomPoint, quaternion.identity);
         return randomPoint;
     }
 

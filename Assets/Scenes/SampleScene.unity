@@ -3569,7 +3569,6 @@ MonoBehaviour:
   player: {fileID: 861332424}
   increaseJumpCount: 3
   decreaseJumpCount: 3
-  intervalJumpForce: 10
 --- !u!114 &861332442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6497,6 +6496,7 @@ MonoBehaviour:
   pointToSpawn: {fileID: 828950771}
   maxConsecutiveSpawnsBad: 1
   badPlatformTypes: 02000000040000000300000005000000
+  point: {fileID: 1214100428}
 --- !u!114 &1860308165
 MonoBehaviour:
   m_ObjectHideFlags: 0
