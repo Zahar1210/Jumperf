@@ -7,6 +7,5 @@ public enum PlatformTypes
     Dead,
     Changing,
     JumpBoost,
-    Blinking,
     Start,
 }

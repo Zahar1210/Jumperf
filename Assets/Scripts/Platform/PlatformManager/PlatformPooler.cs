@@ -1,12 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlatformPooler : MonoBehaviour
 {
+    [SerializeField] private List<PlatformAbstract> _platformAbstracts;
     [SerializeField] private List<PlatformAbstract> platformPrefab;
     [SerializeField] private PlatformInfo[] platformChance;
+
     private float _totalChance;
+    private int _consecutiveSpawnsGood;
+    private int _consecutiveSpawnsBad;
+    private PlatformTypes _platformConsecutiveTypes = PlatformTypes.Moving;
 
     void Start()
     {
@@ -15,6 +19,7 @@ public class PlatformPooler : MonoBehaviour
         {
             PlatformAbstract platform = Instantiate(platformPrefab[i]);
             platform.gameObject.SetActive(false);
+            _platformAbstracts.Add(platform);
         }
 
         foreach (var platformInfo in platformChance)
@@ -22,17 +27,18 @@ public class PlatformPooler : MonoBehaviour
 
         _totalChance = totalChance;
     }
-    
+
     public PlatformTypes GetRandomType()
     {
         float randomValue = Random.Range(0, _totalChance);
         foreach (var platformInfo in platformChance)
         {
-            if (randomValue > platformInfo.Chance)
+            if (randomValue > platformInfo.Chance) {
                 randomValue -= platformInfo.Chance;
-
-            else
+            }
+            else {
                 return platformInfo.PlatformType;
+            }
         }
 
         return PlatformTypes.Original;
@@ -42,35 +48,33 @@ public class PlatformPooler : MonoBehaviour
     {
         PlatformAbstract platform = GetPlatformComponent(type);
         if (platform != null)
-        {
             return platform;
-        }
-        return PlatformToSpawn(type);;
+
+        return PlatformToSpawn(type);
     }
 
     private PlatformAbstract GetPlatformComponent(PlatformTypes type)
     {
-        // if (type == PlatformTypes.Start)
-        //     GetRandomType();
-        PlatformAbstract[] platforms = Resources.FindObjectsOfTypeAll<PlatformAbstract>();
-        foreach (PlatformAbstract platform in platforms)
+        foreach (PlatformAbstract platform in _platformAbstracts)
         {
-            if (platform != null && platform.PlatformType == type && !platform.IsActive)
+            if (platform != null && platform.PlatformType == type && !platform.gameObject.activeInHierarchy)
                 return platform;
         }
+
         return null;
     }
 
-    private PlatformAbstract PlatformToSpawn(PlatformTypes type)//наверно костыль
+    private PlatformAbstract PlatformToSpawn(PlatformTypes type)
     {
         PlatformAbstract platform = GetNewPlatform(type);
         PlatformAbstract platformToSpawn = Instantiate(platform);
+        _platformAbstracts.Add(platform);
         return platformToSpawn;
     }
 
     private PlatformAbstract GetNewPlatform(PlatformTypes type)
     {
-        PlatformAbstract platform = platformPrefab[18];//индеекс платформы по умелчанию пока так для того чтобы всегда брали на запас
+        PlatformAbstract platform = platformPrefab[18];
         foreach (PlatformAbstract prefab in platformPrefab)
         {
             if (prefab.PlatformType == type)

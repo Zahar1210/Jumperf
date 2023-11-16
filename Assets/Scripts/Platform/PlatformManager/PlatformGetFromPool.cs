@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -6,7 +8,7 @@ public class PlatformGetFromPool : MonoBehaviour
     [SerializeField] private float maxInterval;
     [SerializeField] private float minInterval;
     [SerializeField] private PlatformSpawner platformSpawner;
-    [SerializeField] private GameObject point;
+    // [SerializeField] private GameObject point;
 
     private float _spawnDistanceInterval;
     private float _lastSpawnPosition;

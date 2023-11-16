@@ -2,14 +2,9 @@ using UnityEngine;
 
 public class FakePlatform : PlatformAbstract
 {
-    [SerializeField] private Collider2D _collider2D;
     [SerializeField] private Animator animator;
-
-    private void Start()
-    {
-        _collider2D = GetComponent<Collider2D>();
-    }
-
+    [SerializeField] private SpriteRenderer sprite; 
+    
     public override void Action()
     {
         animator.SetBool("isTach", true);
@@ -17,13 +12,14 @@ public class FakePlatform : PlatformAbstract
 
     public void GetCondition()
     {
-        _collider2D.enabled = false;
+        animator.SetBool("isTach", false);
+        sprite.enabled = false;
     }
     
     public override void EnablePlatform(bool isSpawn)
     {
-        Bonus = null;
-        IsActive = isSpawn;
+        sprite.enabled = isSpawn;
         gameObject.SetActive(isSpawn);
+        Bonus = null;
     }
 }

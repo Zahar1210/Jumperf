@@ -12,10 +12,10 @@ public class PlayerSaveJumpController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && slider.isReady)
-        {
-            _player.BoostJump();
-            slider.StartCoroutine();
-        }
+        // if (Input.GetMouseButtonUp(0) && slider.isReady)
+        // {
+            // _player.BoostJump();
+            // slider.StartCoroutine();
+        // }
     }
 }

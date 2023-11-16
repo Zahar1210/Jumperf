@@ -101,10 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bonus: {fileID: 0}
-  IsActive: 0
   PlatformType: 2
-  _collider2D: {fileID: 8155366695465336873}
   animator: {fileID: 5767150539835067526}
+  sprite: {fileID: 1742822303496997088}
 --- !u!61 &8155366695465336873
 BoxCollider2D:
   m_ObjectHideFlags: 0

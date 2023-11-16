@@ -155,7 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bonus: {fileID: 0}
-  IsActive: 0
   PlatformType: 8
   isStart: 0
 --- !u!212 &13908193
@@ -555,7 +554,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3270,7 +3269,6 @@ MonoBehaviour:
   maxInterval: 1.7
   minInterval: 1.4
   platformSpawner: {fileID: 1860308163}
-  point: {fileID: 1214100428}
 --- !u!1 &861332421
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,7 +3612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &953023549
 Transform:
   m_ObjectHideFlags: 0
@@ -4685,7 +4683,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 56
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -6440,9 +6438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab:
-  - {fileID: -6636448741927977634, guid: c123dbc7583144aafb95af1a465d17cb, type: 3}
-  - {fileID: -6636448741927977634, guid: c123dbc7583144aafb95af1a465d17cb, type: 3}
-  - {fileID: -6636448741927977634, guid: c123dbc7583144aafb95af1a465d17cb, type: 3}
   - {fileID: 8662307443281992436, guid: f47e6c0606a104b4db3737d3fcf5072b, type: 3}
   - {fileID: 8662307443281992436, guid: f47e6c0606a104b4db3737d3fcf5072b, type: 3}
   - {fileID: 8662307443281992436, guid: f47e6c0606a104b4db3737d3fcf5072b, type: 3}
@@ -6468,15 +6463,26 @@ MonoBehaviour:
   - {fileID: 902602289137827996, guid: 1ec590188260e4867a177fe27218fa2c, type: 3}
   - {fileID: 902602289137827996, guid: 1ec590188260e4867a177fe27218fa2c, type: 3}
   - {fileID: 902602289137827996, guid: 1ec590188260e4867a177fe27218fa2c, type: 3}
+  - {fileID: 902602289137827996, guid: 1ec590188260e4867a177fe27218fa2c, type: 3}
+  - {fileID: 902602289137827996, guid: 1ec590188260e4867a177fe27218fa2c, type: 3}
+  - {fileID: 370136002919235764, guid: 9d0fb3cdab03d4847a4c13b195db01fc, type: 3}
+  - {fileID: 370136002919235764, guid: 9d0fb3cdab03d4847a4c13b195db01fc, type: 3}
+  - {fileID: 4602614264779236169, guid: fbe06937624c7412092d7c000792ed74, type: 3}
+  - {fileID: 4602614264779236169, guid: fbe06937624c7412092d7c000792ed74, type: 3}
+  - {fileID: 8662307443281992436, guid: f47e6c0606a104b4db3737d3fcf5072b, type: 3}
   platformChance:
-  - {fileID: 11400000, guid: 4fd3ffb644b7947b1a78a7265eb627e1, type: 2}
   - {fileID: 11400000, guid: 9276be5f48e4f4ad79ff5e26a8e26bda, type: 2}
   - {fileID: 11400000, guid: dd92b87e838514692a96acd45ebf8f94, type: 2}
   - {fileID: 11400000, guid: 5b446cd2614ab4930ae95ec64d5f0e2d, type: 2}
-  - {fileID: 11400000, guid: 6ab1a248b6d254ec290361269d006193, type: 2}
   - {fileID: 11400000, guid: 17d3018bd0f9243b38c29d29750fdd85, type: 2}
   - {fileID: 11400000, guid: 05f56e05fdc7949b29240e221792a693, type: 2}
   - {fileID: 11400000, guid: dd789463fa4134726ac463c196e05a2d, type: 2}
+  - {fileID: 11400000, guid: 6ab1a248b6d254ec290361269d006193, type: 2}
+  _platformAbstracts: []
+  maxConsecutiveSpawnsBad: 1
+  maxConsecutiveSpawnsGood: 2
+  goodPlatformTypes: 000000000600000001000000
+  badPlatformTypes: 03000000020000000400000005000000
 --- !u!114 &1860308163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6493,9 +6499,11 @@ MonoBehaviour:
   platformPooler: {fileID: 1860308162}
   mainData: {fileID: 681923088}
   pointToSpawn: {fileID: 828950771}
-  maxConsecutiveSpawns: 1
+  maxConsecutiveSpawnsBad: 1
+  maxConsecutiveSpawnsGood: 2
   goodPlatformTypes: 00000000010000000600000007000000
   badPlatformTypes: 02000000040000000300000005000000
+  point: {fileID: 1214100428}
 --- !u!114 &1860308165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6503,7 +6511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860308159}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 909c7d9f51d2949bdbe8e1b05a1746b1, type: 3}
   m_Name: 

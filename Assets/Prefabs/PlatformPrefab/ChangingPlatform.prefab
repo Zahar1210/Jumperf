@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8295609653773281403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.77370924, y: 351.86682, z: 0}
+  m_LocalPosition: {x: -0.8297283, y: 125.727425, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -145,7 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bonus: {fileID: 0}
-  IsActive: 0
   PlatformType: 5
   _timeChange: 3
   _spriteRenderer: {fileID: 8295609653773281381}

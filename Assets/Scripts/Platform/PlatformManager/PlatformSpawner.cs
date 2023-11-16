@@ -8,21 +8,16 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField] private PlatformPooler platformPooler;
     [SerializeField] private MainData mainData;
     [SerializeField] private Transform pointToSpawn;
-    [SerializeField] private int maxConsecutiveSpawns;
-    [SerializeField] private List<PlatformTypes> goodPlatformTypes;
+    [SerializeField] private int maxConsecutiveSpawnsBad;
     [SerializeField] private List<PlatformTypes> badPlatformTypes;
 
-    private int _consecutiveSpawns;
+    private int _consecutiveSpawnsGood;
+    private int _consecutiveSpawnsBad;
     private int _spawnCount;
     private float _time;
     private PlatformTypes _randomType;
 
     public void SpawnPlatform()
-    {
-        GetRandomType();
-    }
-
-    private void GetRandomType()
     {
         _randomType = platformPooler.GetRandomType();
         TryPlatformType();
@@ -30,22 +25,18 @@ public class PlatformSpawner : MonoBehaviour
 
     private void TryPlatformType()
     {
-        if (goodPlatformTypes.Contains(_randomType))
-        {
-            SpawnPlatformObject(_randomType);
-        }
-        else if (badPlatformTypes.Contains(_randomType))
-        {
-            _consecutiveSpawns++;
-            if (_consecutiveSpawns <= maxConsecutiveSpawns)
-            {
+        if (badPlatformTypes.Contains(_randomType)) {
+            _consecutiveSpawnsBad++;
+            if (_consecutiveSpawnsBad <= maxConsecutiveSpawnsBad) {
                 SpawnPlatformObject(_randomType);
             }
-            else
-            {
-                GetRandomType();
-                _consecutiveSpawns = 0;
+            else {
+                SpawnPlatform();
+                _consecutiveSpawnsBad = 0;
             }
+        }
+        else {
+            SpawnPlatformObject(_randomType);
         }
     }
 
@@ -72,12 +63,7 @@ public class PlatformSpawner : MonoBehaviour
         BonusAbstract bonus = SetBonus(platformType);
         Vector2 platformPosition = GetPlatformPosition();
         PlatformAbstract platform = platformPooler.GetPlatformFromPool(platformType);
-        if (bonus) {
-            PlatformSpawn(platform, platformPosition, bonus);
-        }
-        else {
-            PlatformSpawn(platform, platformPosition);
-        }
+        PlatformSpawn(platform, platformPosition, bonus ? bonus : null);
     }
 
     private BonusAbstract CheckOnType(bool isOriginal)

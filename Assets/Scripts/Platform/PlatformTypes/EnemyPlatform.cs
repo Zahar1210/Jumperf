@@ -49,9 +49,8 @@ public class EnemyPlatform : PlatformAbstract
 
     public override void EnablePlatform(bool isSpawn)
     {
-        Bonus = null;
-        IsActive = isSpawn;
         gameObject.SetActive(isSpawn);
+        Bonus = null;
     }
 
     private void ChangeCondition()
