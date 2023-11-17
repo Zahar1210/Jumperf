@@ -24,10 +24,6 @@ public class MysteryBonus : BonusAbstract
             bool useJumpBonus = (Random.Range(0, 2) == 0);
             _player.JumpBonusUse(useJumpBonus);
         }
-        else
-        {
-            Debug.Log("фигушки");
-        }
     }
 
     public override void EnableBonus(bool isSpawn, PlatformAbstract platform)

@@ -103,7 +103,7 @@ MonoBehaviour:
   Type: 3
   IsActive: 0
   Platform: {fileID: 0}
-  SpawnPosition: {x: 0, y: 0.7, z: 0}
+  SpawnPosition: {x: 0, y: 0.75, z: 0}
   Collider: {fileID: 2413994666154477001}
   animator: {fileID: 3508256544555375370}
 --- !u!61 &2413994666154477001

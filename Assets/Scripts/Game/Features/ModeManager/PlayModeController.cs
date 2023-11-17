@@ -5,13 +5,6 @@ public class PlayModeController : MonoBehaviour
     [SerializeField] private RestartPlayController restart;
     [SerializeField] private StartPlayController start;
     [SerializeField] private PanelController panel;
-    private PlayerBehaviour _player;
-
-    private void Start()//пока так возможно не понадится
-    {
-        _player = PlayerBehaviour.Instance;
-    }
-
     public bool IsStart { get; set; } = true;
 
     public void OnButtonClick(int indexMethod)

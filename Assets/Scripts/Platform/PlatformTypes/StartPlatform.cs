@@ -1,6 +1,9 @@
+using UnityEngine;
+
 public class StartPlatform : PlatformAbstract
 {
     public bool isStart;
+    [SerializeField] private Animator _panelAnimator;
 
     public override void Action()
     {
@@ -13,6 +16,7 @@ public class StartPlatform : PlatformAbstract
         }
         else if (isStart)
         {
+            _panelAnimator.SetBool("isStart", true);
             player.StartJump();
             EnablePlatform(false);
         }

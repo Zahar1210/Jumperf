@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5534850196422151127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5915513, y: 640.7601, z: 0}
+  m_LocalPosition: {x: 1.5901551, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -127,7 +127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bonus: {fileID: 0}
-  IsActive: 0
   PlatformType: 3
   condition: 1
   spriteRenderer: {fileID: 5534850196422151123}

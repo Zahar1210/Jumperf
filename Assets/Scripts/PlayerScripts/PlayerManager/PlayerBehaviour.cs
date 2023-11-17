@@ -91,10 +91,7 @@ public class PlayerBehaviour : MonoBehaviour
         Jump();
         jumpForce -= boostForce;
         if (jumpForce != startJumpForce)//сверх костыль (в данном месте полезен)
-        {
-            Debug.LogError("mdakmd");
             jumpForce = startJumpForce;
-        }
     }
 
     public void StartJump()
@@ -118,7 +115,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Fly(bool isCap)
     {
-        Debug.LogError("вызвал");
         playerUseFly.enabled = true;
         playerUseFly.SetLimitToUseBonus(isCap);
         UseFlyBonus(isCap);

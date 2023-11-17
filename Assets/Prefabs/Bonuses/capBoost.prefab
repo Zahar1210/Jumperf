@@ -102,7 +102,7 @@ MonoBehaviour:
   Type: 0
   IsActive: 0
   Platform: {fileID: 0}
-  SpawnPosition: {x: 0, y: 0.5, z: 0}
+  SpawnPosition: {x: 0, y: 0.6, z: 0}
   Collider: {fileID: 5173817988101235065}
 --- !u!61 &5173817988101235065
 BoxCollider2D:
